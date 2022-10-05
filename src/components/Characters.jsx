@@ -20,8 +20,7 @@ function Characters() {
         />)
         
     return (
-        <section>
-            <h1>Character Details</h1>
+        <section className="grid gap-4 grid-cols-4">
             {renderCharacters}
         </section>
     )
