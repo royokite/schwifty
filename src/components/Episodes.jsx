@@ -30,9 +30,11 @@ function Episodes() {
     }
 
     return (
-        <section>
-            <h1>Episode List</h1>
-            {renderEpisodes}
+        <section className="m-10">
+            <h1 className="text-lime-400/100 text-3xl text-center font-bold  border-gray-800 bg-gray-800 py-3 mb-3">Episode List</h1>
+            <article className="grid gap-4 grid-cols-3">
+                {renderEpisodes}
+            </article>
             <button onClick={handleClick}>Previous Page</button>
             <button onClick={handleClick}>Next Page</button>
         </section>
