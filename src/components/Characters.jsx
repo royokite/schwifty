@@ -31,10 +31,11 @@ function Characters() {
             species={char.species}
             gender={char.gender}
             image={char.image}
+            origin={char.origin.name}
         />)
         
     return (
-        <section className="grid gap-4 grid-cols-4">
+        <section className="grid gap-8 grid-cols-4">
             {renderCharacters}
             <button onClick={handleClick}>Previous Page</button>
             <button onClick={handleClick}>Next Page</button>

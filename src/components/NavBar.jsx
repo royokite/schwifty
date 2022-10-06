@@ -7,12 +7,12 @@ function NavBar() {
       };    
       
     return (
-        <nav className="bg-gray-800  mt-0 sticky w-full z-10 top-0 flex flex-wrap">
+        <nav className="bg-gray-800  mt-0 mb-3 sticky w-full z-10 top-0 flex flex-wrap">
             <article  className="flex-none">
                 <img id="logo" src="./images/logo.png" alt="page logo" style={{width: '8rem', height: '8rem'}} />  
             </article>
             <article className="mt-5 flex-auto">
-                <h1 className="text-5xl text-center font-bold underline text-lime-400/100">Rick and Morty</h1><br /> 
+                <h1 className="text-5xl text-center font-bold underline text-lime-400/100">Get Schwifty</h1><br /> 
             </article>
             
             <article  className="mt-5 flex-none">
