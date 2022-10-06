@@ -3,7 +3,16 @@ import Carousel from 'better-react-carousel'
 
 function CarouselContainer() {
     return (
-        <Carousel cols={3} rows={1} gap={10} loop="true" showDots="true" autoplay={2000} dotColorActive="rgb(132 204 22)" dotColorInactive="rgb(0 0 0)">
+        <Carousel 
+            cols={3} 
+            rows={1} 
+            gap={10} 
+            loop="true" 
+            showDots="true" 
+            autoplay={2000} 
+            dotColorActive="rgb(132 204 22)" 
+            dotColorInactive="rgb(0 0 0)"
+        >
             <Carousel.Item>
                 <img width="100%" height="100%" src="/images/bg5.jpg" alt="carousel item" />
             </Carousel.Item>

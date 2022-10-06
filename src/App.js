@@ -16,6 +16,7 @@ function App() {
           <Route exact path="/locations" element={<Locations />} />
           <Route exact path="/episodes" element={<Episodes />} />
           <Route exact path="/" element={<Home />} />
+          <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
     </section>
   );
