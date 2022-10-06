@@ -30,9 +30,11 @@ function Locations() {
     }
 
     return (
-        <section>
-            <h1>Universe Known Locations</h1>
-            {renderLocations}
+        <section className="m-10">
+            <h1 className="text-lime-400/100 text-3xl text-center font-bold  border-gray-800 bg-gray-800 py-3">Universe Known Locations</h1> <br />
+            <article className="grid gap-4 grid-cols-2">
+                {renderLocations}
+            </article> <br />
             <button onClick={handleClick}>Previous Page</button>
             <button onClick={handleClick}>Next Page</button>
         </section>
