@@ -3,7 +3,7 @@ import React from "react";
 function Home() {
     return (
         <section>
-            <h1 className="text-3xl font-bold underline">Rick and Morty</h1>
+            <h1 className="text-3xl font-bold underline text-lime-400/100">Rick and Morty</h1>
             <h3>Series Info</h3>
             <p>TV Network:	Cartoon Network</p>
             <p>Premiere Date:	Dec 2, 2013</p>

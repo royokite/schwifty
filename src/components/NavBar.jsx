@@ -4,11 +4,15 @@ import { NavLink } from "react-router-dom"
 function NavBar() {
     return (
         <nav>
-            <img id="logo" src="logo.png" alt="page logo" style={{width: '10rem', height: '10rem'}} />
-            <NavLink to="/" exact="true" >Home</NavLink>
-            <NavLink to="/characters" exact="true" >Characters</NavLink>
-            <NavLink to="/locations" exact="true" >Locations</NavLink>
-            <NavLink to="/episodes" exact="true" >Episodes</NavLink>
+            <article style={{display: 'inline-block'}}>
+                <img id="logo" src="logo.png" alt="page logo" style={{width: '5rem', height: '5rem'}} />  
+            </article>
+            <article style={{float: 'right'}}>
+                <NavLink to="/" exact="true" className="bg-lime-500">Home</NavLink>
+                <NavLink to="/characters" exact="true" className="bg-lime-500">Characters</NavLink>
+                <NavLink to="/locations" exact="true" className="bg-lime-500">Locations</NavLink>
+                <NavLink to="/episodes" exact="true" className="bg-lime-500">Episodes</NavLink>
+            </article>
         </nav>
     )
 }

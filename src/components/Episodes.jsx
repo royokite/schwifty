@@ -3,6 +3,7 @@ import EachEpisode from "./EachEpisode";
 
 function Episodes() {
     const [episodes, setEpisodes] = useState([])
+    const [pageNo, setPageNo] = useState(2)
 
     useEffect(() => {
         fetch("https://rickandmortyapi.com/api/episode")
@@ -18,10 +19,22 @@ function Episodes() {
             episode={episode.episode}
         />)
 
+    function handleClick(event) {
+        if(pageNo<4 && pageNo>=1) {
+            event.target.textContent === 'Next Page' ? setPageNo((pageNo) => pageNo + 1) : setPageNo((pageNo) => pageNo - 1)
+    
+            fetch(`https://rickandmortyapi.com/api/episode?page=${pageNo}`)
+                .then(response => response.json())
+                .then(data => setEpisodes(data.results))
+        }
+    }
+
     return (
         <section>
             <h1>Episode List</h1>
             {renderEpisodes}
+            <button onClick={handleClick}>Previous Page</button>
+            <button onClick={handleClick}>Next Page</button>
         </section>
     )
 }
