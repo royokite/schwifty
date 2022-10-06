@@ -30,7 +30,7 @@ function Characters() {
             <article className="grid grid-cols-4 gap-0 justify-center m-6">
                 <button 
                     onClick={() => setPageNo((pageNo) => pageNo - 1)} 
-                    className="bg-sky-700 m-2 p-2 rounded-md hover:bg-lime-500 col-start-1" 
+                    className="bg-sky-700 m-2 p-2 rounded-md hover:bg-lime-500 col-start-1 disabled:opacity-0" 
                     style={{width: "100%"}}
                     disabled={pageNo === 1 ? true : false }
                 >Previous Page
@@ -38,7 +38,7 @@ function Characters() {
                 </button>
                 <button 
                     onClick={() => setPageNo((pageNo) => pageNo + 1)} 
-                    className="bg-sky-700 m-2 p-2 rounded-md hover:bg-lime-500 col-end-5" 
+                    className="bg-sky-700 m-2 p-2 rounded-md hover:bg-lime-500 col-end-5 disabled:opacity-0" 
                     style={{width: "100%"}}
                     disabled={pageNo === 42 ? true : false }
                 >Next Page

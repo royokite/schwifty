@@ -4,6 +4,7 @@ import Episodes from "./components/Episodes";
 import Locations from "./components/Locations";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 import { Route, Routes } from 'react-router-dom'
 
 
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="*" element={<h1 className="text-lime-400/100 text-5xl">404 Not Found!</h1>} />
         </Routes>
+        <Footer />
     </section>
   );
 }
