@@ -14,49 +14,49 @@ function CarouselContainer() {
             dotColorInactive="rgb(0 0 0)"
         >
             <Carousel.Item>
-                <img width="100%" height="100%" src="/images/bg5.jpg" alt="carousel item" />
+                <img src="/images/bg5.jpg" alt="carousel item" />
             </Carousel.Item>
             <Carousel.Item>
-                <img width="100%" height="100%" src="/images/bg2.jpg" alt="carousel item" />
+                <img src="/images/bg2.jpg" alt="carousel item" />
             </Carousel.Item>
             <Carousel.Item>
-                <img width="100%" height="100%" src="/images/bg.jpg" alt="carousel item" />
+                <img src="/images/bg.jpg" alt="carousel item" />
             </Carousel.Item>
             <Carousel.Item>
-                <img width="100%" height="100%" src="/images/bg4.jpg" alt="carousel item" />
+                <img src="/images/bg6.jpg" alt="carousel item" />
             </Carousel.Item>
             <Carousel.Item>
-                <img width="100%" height="100%" src="/images/bg6.jpg" alt="carousel item" />
+                <img src="/images/bg7.png" alt="carousel item" />
             </Carousel.Item>
             <Carousel.Item>
-                <img width="100%" height="100%" src="/images/bg7.png" alt="carousel item" />
+                <img src="/images/bg9.png" alt="carousel item" />
             </Carousel.Item>
             <Carousel.Item>
-                <img width="100%" height="100%" src="/images/bg8.jpg" alt="carousel item" />
+                <img src="/images/bg10.jpg" alt="carousel item" />
             </Carousel.Item>
             <Carousel.Item>
-                <img width="100%" height="100%" src="/images/bg9.png" alt="carousel item" />
+                <img src="/images/bg11.png" alt="carousel item" />
             </Carousel.Item>
             <Carousel.Item>
-                <img width="100%" height="100%" src="/images/bg10.jpg" alt="carousel item" />
+                <img src="/images/bg12.jpg" alt="carousel item" />
             </Carousel.Item>
             <Carousel.Item>
-                <img width="100%" height="100%" src="/images/bg11.png" alt="carousel item" />
+                <img src="/images/bg13.jpg" alt="carousel item" />
             </Carousel.Item>
             <Carousel.Item>
-                <img width="100%" height="100%" src="/images/bg12.jpg" alt="carousel item" />
+                <img src="/images/bg14.png" alt="carousel item" />
             </Carousel.Item>
             <Carousel.Item>
-                <img width="100%" height="100%" src="/images/bg13.jpg" alt="carousel item" />
+                <img src="/images/bg15.jpg" alt="carousel item" />
             </Carousel.Item>
             <Carousel.Item>
-                <img width="100%" height="100%" src="/images/bg14.png" alt="carousel item" />
+                <img src="/images/bg3.jpg" alt="carousel item" />
             </Carousel.Item>
             <Carousel.Item>
-                <img width="100%" height="100%" src="/images/bg15.jpg" alt="carousel item" />
+                <img src="/images/bg4.jpg" alt="carousel item" style={{height: "80%", width: "100%"}}/>
             </Carousel.Item>
             <Carousel.Item>
-                <img width="100%" height="100%" src="/images/bg3.jpg" alt="carousel item" />
+                <img src="/images/bg8.jpg" alt="carousel item" style={{height: "80%", width: "100%"}} />
             </Carousel.Item>
         </Carousel>
     )

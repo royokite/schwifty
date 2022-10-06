@@ -23,13 +23,13 @@ function Home() {
                     Smith, who split their time between domestic life and interdimensional adventures that take place across an infinite number
                     of realities, often travelling to other planets and dimensions through portals and on Rick's flying saucer. The general 
                     concept of Rick and Morty relies on two conflicting scenarios: domestic family drama, and an alcoholic grandfather dragging
-                    his grandson into high jinks.
+                    his grandson into high jinks. <br /> <br />
                     
                     After having been missing for nearly 20 years, Rick Sanchez suddenly arrives at daughter Beth's doorstep to move in with 
                     her and her family. Although Beth welcomes Rick into her home, her husband, Jerry, isn't as happy about the family reunion.
                     Jerry is concerned about Rick, a sociopathic scientist, using the garage as his personal laboratory. In the lab,
                     Rick works on a number of sci-fi gadgets, some of which could be considered dangerous. But that's not all Rick does
-                    that concerns Jerry. He also goes on adventures across the universe that often involve his grandchildren, Morty and Summer.
+                    that concerns Jerry. He also goes on adventures across the universe that often involve his grandchildren, Morty and Summer. <br /> <br />
                     
                     Roiland voices the eponymous characters, with Chris Parnell, Spencer Grammer, and Sarah Chalke voicing the rest of 
                     Rick and Morty's family. The series originated from an animated short parody film of Back to the Future created by 

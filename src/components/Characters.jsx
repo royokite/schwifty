@@ -3,26 +3,14 @@ import EachCharacter from "./EachCharacter";
 
 function Characters() {
     const [characters, setCharacters] = useState([])
-    const [pageNo, setPageNo] = useState(2)
-     
+    const [pageNo, setPageNo] = useState(1)
+
     useEffect(() => {
-        fetch('https://rickandmortyapi.com/api/character')
+        fetch(`https://rickandmortyapi.com/api/character?page=${pageNo}`)
             .then(response => response.json())
             .then(data => setCharacters(data.results))
-    }, [])
+    }, [pageNo])
 
-    function handleClick(event) {
-        if(pageNo<43 && pageNo>=1) {
-            event.target.textContent === 'Next Page' ? setPageNo((pageNo) => pageNo + 1) : setPageNo((pageNo) => pageNo - 1)
-    
-            fetch(`https://rickandmortyapi.com/api/character?page=${pageNo}`)
-                .then(response => response.json())
-                .then(data => setCharacters(data.results))
-        }
-    }
-
-    
-    
     const renderCharacters = characters.map(char => 
         <EachCharacter 
             key={char.id} 
@@ -35,10 +23,27 @@ function Characters() {
         />)
         
     return (
-        <section className="grid gap-8 grid-cols-4">
-            {renderCharacters}
-            <button onClick={handleClick}>Previous Page</button>
-            <button onClick={handleClick}>Next Page</button>
+        <section>
+            <article className="grid gap-8 grid-cols-4 m-6">
+                {renderCharacters}
+            </article>
+            <article className="grid grid-cols-4 gap-0 justify-center m-6">
+                <button 
+                    onClick={() => setPageNo((pageNo) => pageNo - 1)} 
+                    className="bg-sky-700 m-2 p-2 rounded-md hover:bg-lime-500 col-start-1" 
+                    style={{width: "100%"}}
+                    disabled={pageNo === 1 ? true : false }
+                >Previous Page
+                    
+                </button>
+                <button 
+                    onClick={() => setPageNo((pageNo) => pageNo + 1)} 
+                    className="bg-sky-700 m-2 p-2 rounded-md hover:bg-lime-500 col-end-5" 
+                    style={{width: "100%"}}
+                    disabled={pageNo === 42 ? true : false }
+                >Next Page
+                </button>
+            </article>
         </section>
     )
 }
