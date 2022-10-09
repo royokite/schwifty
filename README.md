@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+[<img src="./public/images/logo.png" width="200"/>](logo.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SCHWIFTY
 
-## Available Scripts
+## By: ROY OKITE
 
-In the project directory, you can run:
+## Project Description
 
-### `npm start`
+The project is a react application that is an information hub focusing on the Rick and Morty universe where a user can explore different infromation regarding the show's characters, locations and episode details as well. It also has a feedback component where a user can choose to reach out to me and provide some basic information such as their name and favourite character. The landing page displays a carousel of images related to the show, some basic show information such as the executive producers and network as well as the synopsis for those unfamiliar with show. (X to doubt)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The application was developed to meet the set project requirements:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- It is a single page application.
+- It utilises 11 components for code organization and resusability. (5 minimum requirement)
+- The application employs the use of client-side routing for page to page navigation.
+- A GET and POST request, GET is incorporated to use a publicly available API [Rick and Morty API](https://rickandmortyapi.com/api), while POST was used in the feedback component after creating a JSON file.
+  <br />
+  <br />
 
-### `npm test`
+  ![Landing Page](./public/images/sample1.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deliverables
 
-### `npm run build`
+The app utilizes a single HTML file, Tailwind CSS for styling and Javascript/JSX for interactivity.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A user is able to:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- View character, location and episode information with the option to view more via the next button which renders an additional items each time it is pressed.
+  <br /> <br />
+  ![Characters Sample](./public/images/sample4.png)
+  <br /> <br />
+- Use the feedback form to reach out by inputing some details such as the first name and favourite character.
+  <br /> <br />
+  ![Characters Sample](./public/images/sample6.png)
+  <br /> <br />
+- Read about the show's details on the landing page and navigate to the other available pages using provided links.
+  <br /> <br />
+- Search for character using their name.
+  <br /> <br />
+  ![Characters Sample](./public/images/sample5.png)
+  <br /> <br />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup Instructions
 
-### `npm run eject`
+The project has been deployed and hosted on netlify [netlify](https://app.netlify.com) which is a remote-first cloud computing company that offers a development platform that includes build, deploy, and serverless backend services for web applications and dynamic websites.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Besides the [Rick and Morty API](https://rickandmortyapi.com/api) the app also utilized a local JSON file that handles the data submitted from the feedback form. Heroku would be ideal as the host for this data.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Closing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This react app took a few days to planning, design, develop and deploy. More interactivity and modifications will be made overtime even after submission to polish the style, data and components available on the app.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Sample code to render the characters on the page:
 
-## Learn More
+```
+function Characters() {
+    const [characters, setCharacters] = useState([])
+    const [pageNo, setPageNo] = useState(1)
+    const [search, setSearch] = useState('')
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    useEffect(() => {
+        fetch(`https://rickandmortyapi.com/api/character?page=${pageNo}`)
+            .then(response => response.json())
+            .then(data => setCharacters(data.results))
+    }, [pageNo])
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    const searchItems = characters.filter(ch => ch.name.toLowerCase().includes(search))
+    const renderCharacters = searchItems.map(char =>
+        <EachCharacter
+            key={char.id}
+            name={char.name}
+            status={char.status}
+            species={char.species}
+            gender={char.gender}
+            image={char.image}
+            origin={char.origin.name}
+        />)
 
-### Code Splitting
+    return (
+        <section>
+            <input
+                type="text"
+                name="search-bar"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Search Character Name..."
+                className="border-double border-4 border-lime-400 m-6 rounded-md w-60 p-2"
+            /> <br />
+            <article className="grid gap-8 grid-cols-4 m-6">
+                {renderCharacters}
+            </article>
+            <article className="grid grid-cols-4 gap-0 justify-center m-6">
+                <button
+                    onClick={() => setPageNo((pageNo) => pageNo - 1)}
+                    className="bg-sky-700 m-2 p-2 rounded-md hover:bg-lime-500 col-start-1 disabled:opacity-0"
+                    style={{width: "100%"}}
+                    disabled={pageNo === 1 ? true : false }
+                > Previous Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+                </button>
+                <button
+                    onClick={() => setPageNo((pageNo) => pageNo + 1)}
+                    className="bg-sky-700 m-2 p-2 rounded-md hover:bg-lime-500 col-end-5 disabled:opacity-0"
+                    style={{width: "100%"}}
+                    disabled={pageNo === 42 ? true : false }
+                >Next Page
+                </button>
+            </article>
+        </section>
+    )
+}
+```
 
-### Analyzing the Bundle Size
+### Closing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+All the information and resources used have been publicly sourced from the API and show's website for use and a special
+thanks goes to the shows creators for developing such a unique and entertaining universe whose animated show inspired the creation of this project as part of my learning process.
 
-### Making a Progressive Web App
+All the code and resources utilized have been developed by myself.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## This project aims to fulfill requirements for the Moringa School phase 2 project.

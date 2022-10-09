@@ -19,6 +19,16 @@
       "county": "Kisumu",
       "postal": "100",
       "id": 2
+    },
+    {
+      "fName": "Try",
+      "lName": "Me",
+      "fave": "Rick",
+      "comment": "Netlify test",
+      "constituency": "Starehe",
+      "county": "",
+      "postal": "300",
+      "id": 3
     }
   ]
 }
