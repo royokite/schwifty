@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import { Route, Routes } from 'react-router-dom'
+import Feedback from "./components/Feedback";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/locations" element={<Locations />} />
           <Route exact path="/episodes" element={<Episodes />} />
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/feedback" element={<Feedback />} />
           <Route path="*" element={<h1 className="text-lime-400/100 text-5xl">404 Not Found!</h1>} />
         </Routes>
         <Footer />

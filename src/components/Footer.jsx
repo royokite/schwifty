@@ -1,19 +1,21 @@
-import React, { useState } from "react";
+import { NavLink } from "react-router-dom"
 
 function Footer() {
-    const [fave, setFave] = useState("")
+    let activeStyle = {
+        backgroundColor: "rgb(3 105 161)",
+    };  
+
     return (
-        <section className="bg-gray-800 grid grid-cols-2">
+        <section className="bg-gray-800 grid grid-cols-2 p-4">
+            <NavLink 
+                to="/feedback" 
+                exact="true" 
+                end 
+                className="bg-lime-500 m-2 p-2 rounded-md hover:bg-sky-700 w-60 text-center" 
+                style={({ isActive }) => isActive ? activeStyle : undefined}
+            >FeedBack
+            </NavLink>
             <h2 className="text-lime-400/100 m-4">©Rokyt</h2>
-            <article className="justify-right">
-                <label htmlFor="favourite-character" className="text-lime-400/100">Favourite Character?</label>
-                <input 
-                    type="text" 
-                    name="favourite-character" 
-                    className="border-double border-4 border-lime-400 m-4 rounded-md"
-                    value={fave} 
-                    onChange={(e) => setFave(e.target.value)} />
-            </article>
         </section>
     )
 

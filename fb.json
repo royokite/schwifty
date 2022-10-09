@@ -1,0 +1,24 @@
+{
+  "feedback": [
+    {
+      "id": 1,
+      "fName": "Rick",
+      "lName": "Sanchez",
+      "fave": "Me",
+      "comment": "Humans aint it",
+      "constituency": "wut",
+      "county": "Nairobi",
+      "postal": "Nah"
+    },
+    {
+      "fName": "Me",
+      "lName": "You",
+      "fave": "Sumz",
+      "comment": "Fun show",
+      "constituency": "Stach",
+      "county": "Kisumu",
+      "postal": "100",
+      "id": 2
+    }
+  ]
+}
