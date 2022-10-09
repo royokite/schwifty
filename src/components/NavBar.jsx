@@ -12,7 +12,7 @@ function NavBar() {
                 <NavLink to="/"><img id="logo" src="./images/logo.png" alt="page logo" style={{width: '8rem', height: '8rem'}} /> </NavLink>  
             </article>
             <article className="mt-5 flex-auto">
-                <h1 className="text-5xl text-center font-bold underline text-lime-400/100">Get Schwifty</h1><br /> 
+                <h1 className="text-5xl text-center font-bold underline text-lime-400/100">Get Schwifty...</h1><br /> 
             </article>
             
             <article  className="mt-5 flex-none">

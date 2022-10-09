@@ -4,6 +4,7 @@ import EachCharacter from "./EachCharacter";
 function Characters() {
     const [characters, setCharacters] = useState([])
     const [pageNo, setPageNo] = useState(1)
+    const [search, setSearch] = useState('')
 
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/character?page=${pageNo}`)
@@ -11,7 +12,8 @@ function Characters() {
             .then(data => setCharacters(data.results))
     }, [pageNo])
 
-    const renderCharacters = characters.map(char => 
+    const searchItems = characters.filter(ch => ch.name.toLowerCase().includes(search))
+    const renderCharacters = searchItems.map(char => 
         <EachCharacter 
             key={char.id} 
             name={char.name} 
@@ -24,6 +26,14 @@ function Characters() {
         
     return (
         <section>
+            <input 
+                type="text" 
+                name="search-bar" 
+                value={search} 
+                onChange={(e) => setSearch(e.target.value)} 
+                placeholder="Search Character Name..."
+                className="border-double border-4 border-lime-400 m-6 rounded-md w-60 p-2"
+            /> <br />
             <article className="grid gap-8 grid-cols-4 m-6">
                 {renderCharacters}
             </article>
@@ -33,7 +43,7 @@ function Characters() {
                     className="bg-sky-700 m-2 p-2 rounded-md hover:bg-lime-500 col-start-1 disabled:opacity-0" 
                     style={{width: "100%"}}
                     disabled={pageNo === 1 ? true : false }
-                >Previous Page
+                > Previous Page
                     
                 </button>
                 <button 
