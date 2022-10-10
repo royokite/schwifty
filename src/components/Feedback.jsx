@@ -29,6 +29,8 @@ function Feedback() {
         setConstituency("")
         setCounty("")
         setPostal("")
+
+        alert("Form Submitted")
     }
 
     return (

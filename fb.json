@@ -29,6 +29,16 @@
       "county": "",
       "postal": "300",
       "id": 3
+    },
+    {
+      "fName": "Tye",
+      "lName": "Cliffer",
+      "fave": "Squanch",
+      "comment": "Clean color coordination",
+      "constituency": "Makadara",
+      "county": "Mombasa",
+      "postal": "00200",
+      "id": 4
     }
   ]
 }
