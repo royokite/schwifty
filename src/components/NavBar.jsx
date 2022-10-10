@@ -7,7 +7,7 @@ function NavBar() {
       };    
       
     return (
-        <nav className="bg-gray-800  mt-0 mb-3 sticky w-full z-10 top-0 flex flex-wrap">
+        <nav className="bg-gray-800  mt-0 mb-3 sticky w-full z-10 top-0 flex flex-wrap text-slate-200">
             <article  className="flex-none">
                 <NavLink to="/"><img id="logo" src="./images/logo.png" alt="page logo" style={{width: '8rem', height: '8rem'}} /> </NavLink>  
             </article>

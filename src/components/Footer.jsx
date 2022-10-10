@@ -11,7 +11,7 @@ function Footer() {
                 to="/feedback" 
                 exact="true" 
                 end 
-                className="bg-lime-500 m-2 p-2 rounded-md hover:bg-sky-700 w-60 text-center" 
+                className="bg-lime-500 m-2 p-2 rounded-md hover:bg-sky-700 w-60 text-center text-slate-200" 
                 style={({ isActive }) => isActive ? activeStyle : undefined}
             >FeedBack
             </NavLink>

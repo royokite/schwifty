@@ -3,9 +3,9 @@ import CarouselContainer from "./Carousel";
 
 function Home() {
     return (
-        <section className="m-5">
+        <section className="m-5 text-sky-200">
             <article>
-                <h3 className="text-lime-400/100 text-3xl underline">Series Info</h3> <br />
+                <h3 className="text-lime-400/100 text-3xl underline ">Series Info</h3> <br />
                 <p className="text-lg"><span className="text-lime-400/100">TV Networks: </span>Cartoon Network, Adult Swim</p>
                 <p className="text-lg"><span className="text-lime-400/100">Premiere Date: </span>Dec 2, 2013</p>
                 <p className="text-lg"><span className="text-lime-400/100">Genre: </span>Action</p>
@@ -16,7 +16,7 @@ function Home() {
             </article> <br />
             <article> 
                 <span className="text-lime-400/100 text-2xl underline">Synopsis</span> <br /> <br />
-                <p className="text-justify text-xl bg-lime-400 italic text-black rounded-md p-4"> 
+                <p className="text-justify text-xl bg-lime-400 italic text-slate-200 rounded-md p-4"> 
                     Rick and Morty is an American adult animated science-fiction sitcom created by Justin Roiland and Dan Harmon for Cartoon 
                     Network's nighttime programming block Adult Swim. It is distributed internationally by Warner Bros. Domestic Television. 
                     The series follows the misadventures of cynical mad scientist Rick Sanchez and his good-hearted but fretful grandson Morty

@@ -2,7 +2,7 @@ import React from "react";
 
 function EachCharacter({ name, status, species, gender, image, origin }) {
     return (
-        <article className="border-double border-4 border-lime-400 bg-gray-800 rounded-lg p-2">
+        <article className="border-double border-4 border-lime-400 bg-gray-800 rounded-lg p-2 text-sky-200">
             <img src={image} alt="character appearance" style={{width: '100%'}}/>
             <h2 className="text-lime-400/100 text-2xl">{name}</h2>
             <p>

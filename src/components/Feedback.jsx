@@ -41,7 +41,7 @@ function Feedback() {
                 <article className="flex flex-wrap -mx-3 mb-6">
                     <article className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label
-                            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            className="block uppercase tracking-wide text-sky-200 text-xs font-bold mb-2"
                             htmlFor="grid-first-name"
                         >First Name
                         </label>
@@ -56,7 +56,7 @@ function Feedback() {
                     </article>
                     <article className="w-full md:w-1/2 px-3">
                         <label
-                            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            className="block uppercase tracking-wide text-sky-200 text-xs font-bold mb-2"
                             htmlFor="grid-last-name"
                         >Last Name
                         </label>
@@ -72,7 +72,7 @@ function Feedback() {
                 <article className="flex flex-wrap -mx-3 mb-6">
                     <article className="w-full px-3">
                         <label
-                            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            className="block uppercase tracking-wide text-sky-200 text-xs font-bold mb-2"
                             htmlFor="grid-password"
                         > Favourite Character
                         </label>
@@ -90,8 +90,8 @@ function Feedback() {
                     </article>
                     <article className="w-full px-3">
                         <label
-                            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                            htmlFor="grid-password"
+                            className="block uppercase tracking-wide text-sky-200 text-xs font-bold mb-2"
+                            htmlFor="grid-comment"
                         > Comments
                         </label>
                         <input
@@ -109,7 +109,7 @@ function Feedback() {
                 <article className="flex flex-wrap -mx-3 mb-2">
                     <article className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label
-                            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            className="block uppercase tracking-wide text-sky-200 text-xs font-bold mb-2"
                             htmlFor="grid-city"
                         > Constituency
                         </label>
@@ -124,7 +124,7 @@ function Feedback() {
                     </article>
                     <article className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label
-                            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            className="block uppercase tracking-wide text-sky-200 text-xs font-bold mb-2"
                             htmlFor="grid-state"
                         > County
                         </label>
@@ -152,7 +152,7 @@ function Feedback() {
                     </article>
                     <article className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label
-                            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            className="block uppercase tracking-wide text-sky-200 text-xs font-bold mb-2"
                             htmlFor="grid-zip"
                         > Postal Code
                         </label>
@@ -166,8 +166,8 @@ function Feedback() {
                         /> 
                     </article>
                     <button 
-                        className="bg-lime-500 m-2 p-2 rounded-md hover:bg-sky-700 col-end-5 mt-2 w-full"                      
-                    >Submit</button>
+                        className="bg-lime-500 m-2 p-2 rounded-md hover:bg-sky-700 col-end-5 mt-2 w-full text-slate-200"                      
+                    >SUBMIT</button>
                 </article>
             </form>
         </section>
